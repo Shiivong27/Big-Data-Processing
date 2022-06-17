@@ -25,3 +25,6 @@ jobs:
         with:
           name: output
           path: output
+          env-url: FOOBAR
+      - name: URL for Logic App
+        run: echo "${{ env.FOOBAR }}"  
