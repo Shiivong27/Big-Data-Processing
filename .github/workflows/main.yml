@@ -6,3 +6,9 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World! I would like to take this moment to say that I'm a Github Action noob"
+        
+        
+      - uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: "dir/sample.txt"
+          FILE_DATA: "Hello World!"
