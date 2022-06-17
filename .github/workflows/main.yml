@@ -9,6 +9,10 @@ jobs:
   createFile:
     name: Create A File
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./output
+    
     steps:
       - uses: actions/checkout@v2
       - uses: 1arp/create-a-file-action@0.2
@@ -20,4 +24,4 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: output
-          path: foo
+          path: output
