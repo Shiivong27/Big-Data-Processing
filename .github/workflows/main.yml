@@ -17,3 +17,7 @@ jobs:
           file: 'foo.txt'
           content: |
             Hello World!
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
