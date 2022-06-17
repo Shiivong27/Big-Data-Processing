@@ -1,13 +1,19 @@
-name: hello-world
-on: push
+name: Create A File
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+
 jobs:
-  my-job:
+  createFile:
+    name: Create A File
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
-        
-      - uses: actions/upload-artifact@master
+      - uses: actions/checkout@v2
+      - uses: 1arp/create-a-file-action@0.2
         with:
-          name: blank_file
-          path: blank_file
+          path: 'src'
+          file: 'foo.txt'
+          content: |
+            Hello World!
