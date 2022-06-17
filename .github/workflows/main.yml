@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./output
+        working-directory: ./.github/workflows
     
     steps:
       - uses: actions/checkout@v2
@@ -24,4 +24,4 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: output
-          path: ./output
+          path: output
